@@ -1,9 +1,18 @@
-
 eureka:
   client:
-    register-with-eureka: true
     fetch-registry: true
+    register-with-eureka: true
     service-url:
-      defaultZone: http://27.118.23.51:8761/eureka/
+      defaultZone: ${eureka_url:http://27.118.23.51:8761/eureka}
   instance:
     hostname: 27.118.23.51
+    prefer-ip-address: true
+    
+#eureka:
+ # client:
+  #  register-with-eureka: true
+   # fetch-registry: true
+    #service-url:
+     # defaultZone: http://27.118.23.51:8761/eureka/
+  #instance:
+   # hostname: 27.118.23.51
